@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/CurlNoiseParticleSystem.meta
-guid: c08162a630dc4f54d9fb8bd6978df8c0
-========
-guid: 1d5505fb6b80c9f47bd01b2075b3c5ef
->>>>>>>> SlicingCubesEffect:Assets/ezy-slice-master.meta
+guid: 5adaace07a7fa3f49abcc47b3480d986
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

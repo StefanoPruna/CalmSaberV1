@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a714708b87a0b2418233a7c2b58c28b, type: 2}
+  - {fileID: 2100000, guid: b7146ebd01b9a644482fb9dcff1e0304, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,8 +103,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6267647274981787581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.477, z: 0}
-  m_LocalScale: {x: 0.19190231, y: 1, z: 0.2502112}
+  m_LocalPosition: {x: 0, y: 2.48, z: 0}
+  m_LocalScale: {x: 0.19190231, y: 2, z: 0.2502112}
   m_Children: []
   m_Father: {fileID: 6267647275968575519}
   m_RootOrder: 0
@@ -211,7 +211,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a714708b87a0b2418233a7c2b58c28b, type: 2}
+  - {fileID: 2100000, guid: 07e6050c3a9f08048a3173b0736d94bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6267647275968575519}
   m_Layer: 0
-  m_Name: BlueSaber
+  m_Name: SteBlueSaber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
