@@ -189,6 +189,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6679743b8349140468fb90e7c0b9d3f7, type: 3}
+--- !u!1 &111370242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8675726518185553572, guid: 6679743b8349140468fb90e7c0b9d3f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 111370241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &119143367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,6 +264,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 755bbf7025c495e49b6b0bd07df85c1b, type: 3}
+--- !u!1 &119143368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8675726518185553572, guid: 755bbf7025c495e49b6b0bd07df85c1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 119143367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &141072767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,7 +534,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 512
-  <EffectOnDestroyPrefab>k__BackingField: {fileID: 0}
+  <EffectOnDestroyPrefab>k__BackingField: {fileID: 111370242}
 --- !u!1 &867907480
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +695,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 256
-  <EffectOnDestroyPrefab>k__BackingField: {fileID: 0}
+  <EffectOnDestroyPrefab>k__BackingField: {fileID: 119143368}
 --- !u!1 &1676988087
 GameObject:
   m_ObjectHideFlags: 0
