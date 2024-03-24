@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] cubes;
     public Transform[] spawnPoints;
     public float beat;
-    private float horizontalVariation = 10.0f;
+    private float horizontalVariation = 3.0f;
 
     private float timer;
     private int spawnIndex = 0; // Spawn location number
@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
     {
         if(timer>beat)
         {
-            float horizontalOffset = Random.Range(-HorizontalVariation, HorizontalVariation) * 10;
+            float horizontalOffset = Random.Range(-HorizontalVariation, HorizontalVariation) * 1;
 
             GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
             cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
