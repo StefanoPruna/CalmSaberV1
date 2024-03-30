@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
             float horizontalOffset = Random.Range(-HorizontalVariation, HorizontalVariation) * 1;
 
             GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
-            cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
+            //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
             cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
             timer -= beat;
         }
