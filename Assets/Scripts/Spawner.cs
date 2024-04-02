@@ -7,9 +7,10 @@ public class Spawner : MonoBehaviour
     public GameObject[] cubes;
     public Transform[] spawnPoints;
     public float beat;
-    private float horizontalVariation = 3.0f;
+    private float horizontalVariation = 1.0f;
 
     private float timer;
+    private float totalTimer;
     private int spawnIndex = 0; // Spawn location number
 
     public global::System.Single HorizontalVariation { get => horizontalVariation; set => horizontalVariation = value; }
@@ -33,5 +34,7 @@ public class Spawner : MonoBehaviour
             timer -= beat;
         }
         timer += Time.deltaTime;
+
+        totalTimer += Time.deltaTime;
     }
 }
