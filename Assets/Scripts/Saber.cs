@@ -6,6 +6,7 @@ public class Saber : MonoBehaviour
 {
     public LayerMask layer;
     private Vector3 previousPos;
+    public AudioSource Sword;
 
     [field: SerializeField] public GameObject EffectOnDestroyPrefab { get; private set; }
 
@@ -29,6 +30,7 @@ public class Saber : MonoBehaviour
                     Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity);
 
                 Destroy(hit.transform.gameObject);
+                Sword.Play();
             }                
         }
 
