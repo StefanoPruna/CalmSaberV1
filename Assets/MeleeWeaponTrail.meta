@@ -1,12 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Prefabs/Hail - Medium.prefab.meta
-guid: 5dc7e91495c250546af297fc1cbbb939
-PrefabImporter:
-========
-guid: 206d5dc582766844fa0865a01983c36c
+guid: ae62cace90cffa1408e2c8800d00367f
 folderAsset: yes
 DefaultImporter:
->>>>>>>> origin/HapticFeedback:Assets/MeleeWeaponTrail.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
