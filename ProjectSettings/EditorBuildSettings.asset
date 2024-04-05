@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VRMap1.unity
     guid: 1828db6c1f664e244a468051b32dedea
+  - enabled: 0
+    path: Assets/Scenes/VRMap2.unity
+    guid: a2470bfd15088364cb13dc29921a083c
   m_configObjects: {}
