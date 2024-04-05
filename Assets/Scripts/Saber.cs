@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Saber : MonoBehaviour
 {
+    [field: SerializeField]
     public LayerMask layer;
+
+    [field: SerializeField]
     private Vector3 previousPos;
+
+    [field: SerializeField]
     public AudioSource Sword;
+
+   // [field: SerializeField]
+   // public XRBaseController HandController;
 
     [field: SerializeField] public GameObject EffectOnDestroyPrefab { get; private set; }
 
@@ -30,10 +40,19 @@ public class Saber : MonoBehaviour
                     Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity);
 
                 Destroy(hit.transform.gameObject);
+              /*  if (HandController != null)
+                {
+                    HandController.SendHapticImpulse(0.5f, 0.5f);
+                }*/
                 Sword.Play();
             }                
         }
 
         previousPos = transform.position;
+    }
+
+    void onCollisionHaptic(Collision c)
+    {
+
     }
 }
