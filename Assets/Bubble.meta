@@ -1,12 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Prefabs/BlueBubbleSliceable.prefab.meta
-guid: 0409e0ddbe2fc3249b8148e1c74b91d1
-PrefabImporter:
-========
-guid: 3987b6a7c25f64645910f2aea9bb991b
+guid: a6bc98dd86328c940891bbe21e95dd74
 folderAsset: yes
 DefaultImporter:
->>>>>>>> main:Assets/Bubble.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

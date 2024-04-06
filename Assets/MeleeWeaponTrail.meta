@@ -1,12 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Prefabs/RedBubbleSliceble.prefab.meta
-guid: 61d05579901bb0d4c8472500e4feee86
-PrefabImporter:
-========
-guid: ae62cace90cffa1408e2c8800d00367f
+guid: c3f308ab8ea69a3448f3a005596cb709
 folderAsset: yes
 DefaultImporter:
->>>>>>>> main:Assets/MeleeWeaponTrail.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
