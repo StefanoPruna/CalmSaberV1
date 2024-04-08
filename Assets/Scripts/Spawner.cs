@@ -7,32 +7,53 @@ public class Spawner : MonoBehaviour
     public GameObject[] cubes;
     public Transform[] spawnPoints;
     public float beat;
-    private float horizontalVariation = 1.0f;
 
     private float timer;
     private float totalTimer;
-    private int spawnIndex = 0; // Spawn location number
+    private int beatStage;
+    private float StageChangeTime;
+    private float nextStageBeatRate;
 
-    public global::System.Single HorizontalVariation { get => horizontalVariation; set => horizontalVariation = value; }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        beat = 1f;
+        beatStage = 0;
+        StageChangeTime = 30f;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timer>beat)
+        if (totalTimer => StageChangeTime)
         {
-            float horizontalOffset = Random.Range(-HorizontalVariation, HorizontalVariation) * 1;
+
+            beat = nextStageBeatRate;
+            beatStage = +1f;
+
+        }
+
+        if (timer > beat)
+        {
 
             GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
             //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
             cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
             timer -= beat;
         }
+        
+        if (beatStage = 1)
+        {
+
+            nextStageBeatRate = 0.5f;
+            StageChangeTime = 30.0f;
+
+        }
+
         timer += Time.deltaTime;
 
         totalTimer += Time.deltaTime;
