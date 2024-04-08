@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 2272796018424427920}
   - component: {fileID: 2272796018424427925}
   m_Layer: 8
-  m_Name: SliceableBlueCube
+  m_Name: SteSliceableBlueCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

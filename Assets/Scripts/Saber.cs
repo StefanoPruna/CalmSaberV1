@@ -6,6 +6,10 @@ public class Saber : MonoBehaviour
 {
     public LayerMask layer;
     private Vector3 previousPos;
+    public AudioSource Sword;
+
+    [field: SerializeField] public GameObject EffectOnDestroyPrefab { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +25,13 @@ public class Saber : MonoBehaviour
         {
             //Here is when the Saber is from up of 130 to down towards the cube 
             if (Vector3.Angle(transform.position - previousPos, hit.transform.up) > 130)
+            {
+                if (EffectOnDestroyPrefab)
+                    Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity);
+
                 Destroy(hit.transform.gameObject);
+                Sword.Play();
+            }                
         }
 
         previousPos = transform.position;
