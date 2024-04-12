@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Saber : MonoBehaviour
 {
     public LayerMask layer;
     private Vector3 previousPos;
     public AudioSource Sword;
-
     [field: SerializeField] public GameObject EffectOnDestroyPrefab { get; private set; }
+    
+    //[SerializeField] public Controller controller;
 
+    //Right hand controller
+    //var mask = OVRInput.Controller.RTouch;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +30,15 @@ public class Saber : MonoBehaviour
             //Here is when the Saber is from up of 130 to down towards the cube 
             if (Vector3.Angle(transform.position - previousPos, hit.transform.up) > 130)
             {
+                //slice efx
                 if (EffectOnDestroyPrefab)
                     Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity);
-
+                //remove object
                 Destroy(hit.transform.gameObject);
+                //play sound
                 Sword.Play();
+                //Haptic Feedback
+                //OVRInput.SetControllerVibration(0.5f,0.5f, OVRInput.Controller.RTouch);
             }                
         }
 
