@@ -36,9 +36,7 @@ public class Saber : MonoBehaviour
                 //remove object
                 Destroy(hit.transform.gameObject);
                 //play sound
-                Sword.Play();
-                //Haptic Feedback
-                //OVRInput.SetControllerVibration(0.5f,0.5f, OVRInput.Controller.RTouch);
+                Sword.Play();                
             }                
         }
 
