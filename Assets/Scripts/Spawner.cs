@@ -7,9 +7,9 @@ public class Spawner : MonoBehaviour
     public GameObject[] cubes;
     public Transform[] spawnPoints;
     public float beat;
+    public float totalTimer;
 
     private float timer;
-    private float totalTimer;
     private int beatStage;
     private float StageChangeTime;
     private float nextStageBeatRate;
@@ -19,9 +19,9 @@ public class Spawner : MonoBehaviour
     void Start()
     {
 
-        beat = 1f;
+        beat = 1;
         beatStage = 0;
-        StageChangeTime = 30f;
+        StageChangeTime = 10f;
 
 
     }
@@ -29,11 +29,12 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (totalTimer => StageChangeTime)
+        if (totalTimer >= StageChangeTime)
         {
 
             beat = nextStageBeatRate;
-            beatStage = +1f;
+            beatStage = beatStage +1;
+
 
         }
 
@@ -46,11 +47,19 @@ public class Spawner : MonoBehaviour
             timer -= beat;
         }
         
-        if (beatStage = 1)
+        if (beatStage == 1)
         {
 
             nextStageBeatRate = 0.5f;
-            StageChangeTime = 30.0f;
+            StageChangeTime = 10f;
+
+        }
+
+        if (beatStage == 2)
+        {
+
+            nextStageBeatRate = 10.0f;
+            StageChangeTime = 20f;
 
         }
 
