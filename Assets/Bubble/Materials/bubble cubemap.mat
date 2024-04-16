@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: bubble cubemap
   m_Shader: {fileID: 4800000, guid: 611c4f885b34bfd4cb985bc242ca4d3e, type: 3}
   m_ShaderKeywords: 
@@ -98,7 +99,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Glow: 0.5
+    - _Glow: 10
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1

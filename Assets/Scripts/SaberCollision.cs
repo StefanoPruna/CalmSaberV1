@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SaberCollision : MonoBehaviour
 {
+    public AudioSource Sword;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class SaberCollision : MonoBehaviour
             //If the GameObject has the same tag as specified, output this message in the console
             OVRInput.SetControllerVibration(1f, 1f, OVRInput.Controller.RTouch);
             OVRInput.SetControllerVibration(1f, 1f, OVRInput.Controller.LTouch);
+            Sword.Play();
         }
     }
         // Update is called once per frame
