@@ -15,13 +15,14 @@ public class Spawner : MonoBehaviour
     private float nextStageBeatRate;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
 
-        beat = 1;
-        beatStage = 0;
-        StageChangeTime = 10f;
+        beat = 2;
+        beatStage = 1;
+        StageChangeTime = 5;
 
 
     }
@@ -41,25 +42,38 @@ public class Spawner : MonoBehaviour
         if (timer > beat)
         {
 
-            GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
-            //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
-            cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
-            timer -= beat;
+            {
+
+                GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
+                //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
+                cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
+                timer -= beat;
+
+            }
+            
         }
         
         if (beatStage == 1)
         {
 
-            nextStageBeatRate = 0.5f;
-            StageChangeTime = 10f;
+            nextStageBeatRate = 1;
+            StageChangeTime = 15f;
 
         }
 
         if (beatStage == 2)
         {
 
-            nextStageBeatRate = 10.0f;
-            StageChangeTime = 20f;
+            nextStageBeatRate = 5f;
+            StageChangeTime = 30f;
+
+        }
+
+        if (beatStage == 3)
+        {
+
+            nextStageBeatRate = 0.5f;
+            StageChangeTime = 45;
 
         }
 
