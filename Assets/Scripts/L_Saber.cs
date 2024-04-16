@@ -7,8 +7,12 @@ public class L_Saber : MonoBehaviour
 {
     public LayerMask layer;
     private Vector3 previousPos;
-    public AudioSource Sword;
+    public AudioSource SwordAudio;
+    [field: SerializeField] public GameObject LeftController { get; private set; }
     [field: SerializeField] public GameObject EffectOnDestroyPrefab { get; private set; }
+
+
+    var maskHand = OVRInput.Controller.LTouch;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +30,16 @@ public class L_Saber : MonoBehaviour
             //Here is when the Saber is from up of 130 to down towards the cube 
             if (Vector3.Angle(transform.position - previousPos, hit.transform.up) > 130)
             {
+               if (LeftController)
+                    //Haptic vibration
+                    OVRInput.SetControllerVibration(.3f, 0.3f, LeftController);
                 //slice efx
                 if (EffectOnDestroyPrefab)
                     Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity);
                 //remove object
                 Destroy(hit.transform.gameObject);
                 //play sound
-                Sword.Play();
+                SwordAudio.Play();
             }
         }
 
