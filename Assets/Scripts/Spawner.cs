@@ -7,32 +7,76 @@ public class Spawner : MonoBehaviour
     public GameObject[] cubes;
     public Transform[] spawnPoints;
     public float beat;
-    private float horizontalVariation = 1.0f;
+    public float totalTimer;
 
     private float timer;
-    private float totalTimer;
-    private int spawnIndex = 0; // Spawn location number
+    private int beatStage;
+    private float StageChangeTime;
+    private float nextStageBeatRate;
 
-    public global::System.Single HorizontalVariation { get => horizontalVariation; set => horizontalVariation = value; }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        beat = 2;
+        beatStage = 1;
+        StageChangeTime = 5;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timer>beat)
+        if (totalTimer >= StageChangeTime)
         {
-            float horizontalOffset = Random.Range(-HorizontalVariation, HorizontalVariation) * 1;
 
-            GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
-            cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 1f, 2f);
-            cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
-            timer -= beat;
+            beat = nextStageBeatRate;
+            beatStage = beatStage +1;
+
+
         }
+
+        if (timer > beat)
+        {
+
+            {
+
+                GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
+                //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
+                cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
+                timer -= beat;
+
+            }
+            
+        }
+        
+        if (beatStage == 1)
+        {
+
+            nextStageBeatRate = 1;
+            StageChangeTime = 15f;
+
+        }
+
+        if (beatStage == 2)
+        {
+
+            nextStageBeatRate = 5f;
+            StageChangeTime = 30f;
+
+        }
+
+        if (beatStage == 3)
+        {
+
+            nextStageBeatRate = 0.5f;
+            StageChangeTime = 45;
+
+        }
+
         timer += Time.deltaTime;
 
         totalTimer += Time.deltaTime;
