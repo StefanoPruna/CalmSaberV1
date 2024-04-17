@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
     private int beatStage;
     private float StageChangeTime;
     private float nextStageBeatRate;
+    private float horizontalOffset;
 
 
 
@@ -45,7 +46,8 @@ public class Spawner : MonoBehaviour
             {
 
                 GameObject cube = Instantiate(cubes[Random.Range(0, 2)], spawnPoints[Random.Range(0, 4)]);
-                //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0f, 0f);
+                //cube.transform.localPosition = Vector3.zero + new Vector3(horizontalOffset, 0.5f, 2f);
+                cube.transform.localPosition = Vector3.zero + new Vector3(Random.Range(-1, 1f), Random.Range(0f, 1f));
                 cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
                 timer -= beat;
 
