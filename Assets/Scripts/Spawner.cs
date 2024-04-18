@@ -21,9 +21,9 @@ public class Spawner : MonoBehaviour
     void Start()
     {
 
-        beat = 2;
+        beat = 2.8f;
         beatStage = 1;
-        StageChangeTime = 5;
+        StageChangeTime = 8;
 
 
     }
@@ -58,8 +58,8 @@ public class Spawner : MonoBehaviour
         if (beatStage == 1)
         {
 
-            nextStageBeatRate = 1;
-            StageChangeTime = 15f;
+            nextStageBeatRate = 2.2f;
+            StageChangeTime = 20f;
 
         }
 
@@ -67,15 +67,39 @@ public class Spawner : MonoBehaviour
         {
 
             nextStageBeatRate = 5f;
-            StageChangeTime = 30f;
+            StageChangeTime = 32f;
 
         }
 
         if (beatStage == 3)
         {
 
-            nextStageBeatRate = 0.5f;
-            StageChangeTime = 45;
+            nextStageBeatRate = 2.2f;
+            StageChangeTime = 52f;
+
+        }
+
+        if (beatStage == 4)
+        {
+
+            nextStageBeatRate = 2.2f;
+            StageChangeTime = 72f;
+
+        }
+
+        if (beatStage == 5)
+        {
+
+            nextStageBeatRate = 5f;
+            StageChangeTime = 92f;
+
+        }
+
+        if (beatStage == 6)
+        {
+
+            nextStageBeatRate = 2.2f;
+            StageChangeTime = 112f;
 
         }
 
