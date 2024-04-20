@@ -21,10 +21,10 @@ public class Spawner : MonoBehaviour
     void Start()
     {
 
-        beat = 2.8f;
-        beatStage = 1;
-        StageChangeTime = 8;
-
+        beat = 2.7f;
+        beatStage = 0;
+        StageChangeTime = 18f;
+        nextStageBeatRate = 2.2f;
 
     }
 
@@ -37,6 +37,109 @@ public class Spawner : MonoBehaviour
             beat = nextStageBeatRate;
             beatStage = beatStage +1;
 
+            if (beatStage == 1)
+            {
+
+                nextStageBeatRate = 2.2f;
+                StageChangeTime = 41f;
+
+            }
+
+            if (beatStage == 2)
+            {
+
+                nextStageBeatRate = 2f;
+                StageChangeTime = 65f;
+
+            }
+
+            if (beatStage == 3)
+            {
+
+                nextStageBeatRate = 2.2f;
+                StageChangeTime = 89f;
+
+            }
+
+            if (beatStage == 4)
+            {
+
+                nextStageBeatRate = 2f;
+                StageChangeTime = 113f;
+
+            }
+
+            if (beatStage == 5)
+            {
+
+                nextStageBeatRate = 2.7f;
+                StageChangeTime = 136f;
+
+            }
+
+            if (beatStage == 6)
+            {
+
+                nextStageBeatRate = 2f;
+                StageChangeTime = 160f;
+
+            }
+
+            if (beatStage == 7)
+            {
+
+                nextStageBeatRate = 2.2f;
+                StageChangeTime = 183f;
+
+            }
+
+            if (beatStage == 8)
+            {
+
+                nextStageBeatRate = 2f;
+                StageChangeTime = 207f;
+
+            }
+
+            if (beatStage == 9)
+            {
+
+                nextStageBeatRate = 2f;
+                StageChangeTime = 229f;
+
+            }
+
+            if (beatStage == 10)
+            {
+
+                nextStageBeatRate = 1.8f;
+                StageChangeTime = 255f;
+
+            }
+
+            if (beatStage == 11)
+            {
+
+                nextStageBeatRate = 1.8f;
+                StageChangeTime = 279f;
+
+            }
+
+            if (beatStage == 12)
+            {
+
+                nextStageBeatRate = 2.7f;
+                StageChangeTime = 289f;
+
+            }
+
+            if (beatStage == 13)
+            {
+
+                nextStageBeatRate = 30f;
+                StageChangeTime = 295f;
+
+            }
 
         }
 
@@ -55,53 +158,6 @@ public class Spawner : MonoBehaviour
             
         }
         
-        if (beatStage == 1)
-        {
-
-            nextStageBeatRate = 2.2f;
-            StageChangeTime = 20f;
-
-        }
-
-        if (beatStage == 2)
-        {
-
-            nextStageBeatRate = 5f;
-            StageChangeTime = 32f;
-
-        }
-
-        if (beatStage == 3)
-        {
-
-            nextStageBeatRate = 2.2f;
-            StageChangeTime = 52f;
-
-        }
-
-        if (beatStage == 4)
-        {
-
-            nextStageBeatRate = 2.2f;
-            StageChangeTime = 72f;
-
-        }
-
-        if (beatStage == 5)
-        {
-
-            nextStageBeatRate = 5f;
-            StageChangeTime = 92f;
-
-        }
-
-        if (beatStage == 6)
-        {
-
-            nextStageBeatRate = 2.2f;
-            StageChangeTime = 112f;
-
-        }
 
         timer += Time.deltaTime;
 
