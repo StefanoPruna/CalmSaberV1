@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour
     private int beatStage;
     private float StageChangeTime;
     private float nextStageBeatRate;
-    private float horizontalOffset;
 
 
 
@@ -35,7 +34,7 @@ public class Spawner : MonoBehaviour
         {
 
             beat = nextStageBeatRate;
-            beatStage = beatStage +1;
+            beatStage = beatStage + 1;
 
             if (beatStage == 1)
             {
@@ -155,9 +154,9 @@ public class Spawner : MonoBehaviour
                 timer -= beat;
 
             }
-            
+
         }
-        
+
 
         timer += Time.deltaTime;
 
