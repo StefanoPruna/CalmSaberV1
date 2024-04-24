@@ -20,27 +20,36 @@ public class SaberV2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         RaycastHit hit;
         //Movement of the Saber to 130 degrees to cut the cube and destroy it when hit it
         if (Physics.Raycast(transform.position, transform.forward, out hit, 1, layer))
         {
-            //Here is when the Saber is from up of 130 to down towards the cube 
-            //if (Vector3.Angle(transform.position - previousPos, hit.transform.up) > 130)
-            //{
+            
                 if (EffectOnDestroyPrefab)
                 {
                     Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity); 
-                if(controllerName == "Left")
-                    OVRInput.SetControllerVibration(1.5f, 1.5f, OVRInput.Controller.LTouch);
-                if (controllerName == "Right")
-                    OVRInput.SetControllerVibration(1.5f, 1.5f, OVRInput.Controller.RTouch);
+
+                    if(controllerName == "Left")
+                        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);    
+                    
+                    if (controllerName == "Right")
+                        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);                   
                 }
 
                 Destroy(hit.transform.gameObject);
-                Sword.Play();
-            //}
+                Sword.Play();         
+
         }
+                
+     
 
         previousPos = transform.position;
     }
+
+
+   
+
+
+
 }
